@@ -8,24 +8,45 @@
 
 import UIKit
 
-class CameraVC: CameraViewController {
-    
+class CameraVC: CameraViewController, CameraVCDelegate {
+  
+    @IBOutlet weak var recordBtn: UIButton!
+    @IBOutlet weak var cameraBtn: UIButton!
     @IBOutlet weak var previewView: PreviewView!
     
     override func viewDidLoad() {
         _previewView = previewView
         super.viewDidLoad()
-    
         
+        delegate = self
         
     }
 
+    func canStartRecording() {
+        print("Can start recording")
+    }
+    
+    func recordingHasStarted() {
+        print("Recording has started")
+    }
+    
+    func shouldEnableCameraUI(enabled: Bool) {
+        cameraBtn.isEnabled = enabled
+        print("Should Enable Camera UI")
+    }
+    
+    func shouldEnableRecordUI(enabled: Bool) {
+        recordBtn.isEnabled = enabled
+        print("Should enable record UI")
+    }
+
+    
     @IBAction func changeCameraBtnPressed(_ sender: Any) {
-        changeCamera(UIButton)
+        changeCamera(cameraBtn)
     }
     
     @IBAction func recordBtnPressed(_ sender: UIButton) {
-        toggleMovieRecording(UIButton)
+        toggleMovieRecording(recordBtn)
         
     }
     

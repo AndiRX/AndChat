@@ -59,7 +59,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cameraBtn" destination="JXq-dt-RWW" id="UWh-cC-qPO"/>
                         <outlet property="previewView" destination="esp-hs-G4X" id="1PP-bS-SOJ"/>
+                        <outlet property="recordBtn" destination="QmF-j4-USH" id="69Y-zy-Hk1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

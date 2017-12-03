@@ -10,6 +10,8 @@ import Foundation
 
 protocol CameraVCDelegate {
     
+    init()
+    
     func shouldEnableCameraUI(enabled: Bool)
     func shouldEnableRecordUI(enabled: Bool)
     func canStartRecording()

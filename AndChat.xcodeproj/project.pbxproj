@@ -17,6 +17,7 @@
 		4B4B73391FD442380003F064 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B73371FD442370003F064 /* CameraViewController.swift */; };
 		4B4B733D1FD44F240003F064 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B733C1FD44F240003F064 /* PhotoCaptureDelegate.swift */; };
 		4B4B73401FD45AE30003F064 /* CameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */; };
+		4B4B73421FD4AFA10003F064 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B73411FD4AFA00003F064 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		4B4B73371FD442370003F064 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		4B4B733C1FD44F240003F064 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVCDelegate.swift; sourceTree = "<group>"; };
+		4B4B73411FD4AFA00003F064 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				4B4B733C1FD44F240003F064 /* PhotoCaptureDelegate.swift */,
 				4B4B731F1FD441F50003F064 /* LaunchScreen.storyboard */,
 				4B4B73221FD441F50003F064 /* Info.plist */,
+				4B4B73411FD4AFA00003F064 /* GoogleService-Info.plist */,
 			);
 			path = AndChat;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4B73211FD441F50003F064 /* LaunchScreen.storyboard in Resources */,
+				4B4B73421FD4AFA10003F064 /* GoogleService-Info.plist in Resources */,
 				4B4B731E1FD441F50003F064 /* Assets.xcassets in Resources */,
 				4B4B731C1FD441F50003F064 /* Main.storyboard in Resources */,
 			);
