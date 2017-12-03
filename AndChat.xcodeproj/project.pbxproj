@@ -16,6 +16,7 @@
 		4B4B73381FD442380003F064 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B73361FD442370003F064 /* PreviewView.swift */; };
 		4B4B73391FD442380003F064 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B73371FD442370003F064 /* CameraViewController.swift */; };
 		4B4B733D1FD44F240003F064 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B733C1FD44F240003F064 /* PhotoCaptureDelegate.swift */; };
+		4B4B73401FD45AE30003F064 /* CameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		4B4B73361FD442370003F064 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		4B4B73371FD442370003F064 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		4B4B733C1FD44F240003F064 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
+		4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVCDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		4B4B73151FD441F50003F064 /* AndChat */ = {
 			isa = PBXGroup;
 			children = (
+				4B4B733E1FD45A9E0003F064 /* New Group */,
 				4B4B733B1FD442430003F064 /* View */,
 				4B4B733A1FD4423B0003F064 /* Controller */,
 				4B4B73161FD441F50003F064 /* AppDelegate.swift */,
@@ -119,6 +122,14 @@
 				4B4B73361FD442370003F064 /* PreviewView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4B4B733E1FD45A9E0003F064 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +239,7 @@
 				4B4B73391FD442380003F064 /* CameraViewController.swift in Sources */,
 				4B4B73171FD441F50003F064 /* AppDelegate.swift in Sources */,
 				4B4B733D1FD44F240003F064 /* PhotoCaptureDelegate.swift in Sources */,
+				4B4B73401FD45AE30003F064 /* CameraVCDelegate.swift in Sources */,
 				4B4B73381FD442380003F064 /* PreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

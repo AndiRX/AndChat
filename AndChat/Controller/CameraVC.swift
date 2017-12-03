@@ -13,13 +13,21 @@ class CameraVC: CameraViewController {
     @IBOutlet weak var previewView: PreviewView!
     
     override func viewDidLoad() {
-        self._previewView = previewView
+        _previewView = previewView
         super.viewDidLoad()
     
         
         
     }
 
-
+    @IBAction func changeCameraBtnPressed(_ sender: Any) {
+        changeCamera(UIButton)
+    }
+    
+    @IBAction func recordBtnPressed(_ sender: UIButton) {
+        toggleMovieRecording(UIButton)
+        
+    }
+    
 }
 
