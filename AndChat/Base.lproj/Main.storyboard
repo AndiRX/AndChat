@@ -71,16 +71,17 @@
                         <outlet property="cameraBtn" destination="JXq-dt-RWW" id="UWh-cC-qPO"/>
                         <outlet property="previewView" destination="esp-hs-G4X" id="1PP-bS-SOJ"/>
                         <outlet property="recordBtn" destination="QmF-j4-USH" id="69Y-zy-Hk1"/>
+                        <segue destination="qZZ-Sv-9qL" kind="presentation" identifier="goToLoginVC" id="NDT-7q-iuZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="z5r-7A-HyL">
             <objects>
-                <viewController id="qZZ-Sv-9qL" sceneMemberID="viewController">
+                <viewController id="qZZ-Sv-9qL" customClass="LoginVC" customModule="AndChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ue-RF-VGH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

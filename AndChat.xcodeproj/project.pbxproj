@@ -10,6 +10,7 @@
 		38CACB3A57AA839134CA1F03 /* Pods_AndChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9F6010BB5B6F37D8288071 /* Pods_AndChat.framework */; };
 		4B06E7FC1FD5F85600788612 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B06E7FB1FD5F85600788612 /* RoundTextField.swift */; };
 		4B06E7FE1FD8A07D00788612 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B06E7FD1FD8A07D00788612 /* RoundedButton.swift */; };
+		4B06E8001FD8A6DE00788612 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B06E7FF1FD8A6DE00788612 /* LoginVC.swift */; };
 		4B4B73171FD441F50003F064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B73161FD441F50003F064 /* AppDelegate.swift */; };
 		4B4B73191FD441F50003F064 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B73181FD441F50003F064 /* CameraVC.swift */; };
 		4B4B731C1FD441F50003F064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B731A1FD441F50003F064 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		408051ECC5DDE56E69087E7C /* Pods_AndChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AndChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B06E7FB1FD5F85600788612 /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		4B06E7FD1FD8A07D00788612 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		4B06E7FF1FD8A6DE00788612 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4B4B73131FD441F50003F064 /* AndChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AndChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4B73161FD441F50003F064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B4B73181FD441F50003F064 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				4B4B73371FD442370003F064 /* CameraViewController.swift */,
 				4B4B73181FD441F50003F064 /* CameraVC.swift */,
+				4B06E7FF1FD8A6DE00788612 /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				4B4B73171FD441F50003F064 /* AppDelegate.swift in Sources */,
 				4B06E7FE1FD8A07D00788612 /* RoundedButton.swift in Sources */,
 				4B4B733D1FD44F240003F064 /* PhotoCaptureDelegate.swift in Sources */,
+				4B06E8001FD8A6DE00788612 /* LoginVC.swift in Sources */,
 				4B4B73401FD45AE30003F064 /* CameraVCDelegate.swift in Sources */,
 				4B4B73381FD442380003F064 /* PreviewView.swift in Sources */,
 				4B06E7FC1FD5F85600788612 /* RoundTextField.swift in Sources */,
@@ -551,6 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CGNK9ZT3P;
 				INFOPLIST_FILE = AndChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndreasRiexinger.AndChat;
@@ -566,6 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CGNK9ZT3P;
 				INFOPLIST_FILE = AndChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndreasRiexinger.AndChat;

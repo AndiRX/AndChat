@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class CameraVC: CameraViewController, CameraVCDelegate {
   
@@ -17,11 +18,16 @@ class CameraVC: CameraViewController, CameraVCDelegate {
     override func viewDidLoad() {
         _previewView = previewView
         super.viewDidLoad()
-        
         delegate = self
-        
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        guard Auth.auth().currentUser != nil else {
+            performSegue(withIdentifier: "goToLoginVC", sender: nil)
+            return
+        }
+    }
+    
     func canStartRecording() {
         print("Can start recording")
     }
