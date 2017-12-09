@@ -22,6 +22,7 @@
 		4B4B733D1FD44F240003F064 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B733C1FD44F240003F064 /* PhotoCaptureDelegate.swift */; };
 		4B4B73401FD45AE30003F064 /* CameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */; };
 		4B4B73421FD4AFA10003F064 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B73411FD4AFA00003F064 /* GoogleService-Info.plist */; };
+		4BDA322D1FDC332F007D8974 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDA322C1FDC332F007D8974 /* AuthService.swift */; };
 		FB69A8EFD990F07354B5D21C /* Pods_AndChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408051ECC5DDE56E69087E7C /* Pods_AndChatTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		4B4B733C1FD44F240003F064 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVCDelegate.swift; sourceTree = "<group>"; };
 		4B4B73411FD4AFA00003F064 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4BDA322C1FDC332F007D8974 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		508C81E9423FBF67F6D70B8E /* Pods-AndChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndChatTests/Pods-AndChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		694534C49AC770D27DEF3B48 /* Pods-AndChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndChat/Pods-AndChat.debug.xcconfig"; sourceTree = "<group>"; };
 		D8AF242C4CCE5A8F0D95AEFA /* Pods-AndChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-AndChat/Pods-AndChat.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +116,8 @@
 		4B4B73151FD441F50003F064 /* AndChat */ = {
 			isa = PBXGroup;
 			children = (
-				4B4B733E1FD45A9E0003F064 /* New Group */,
+				4BDA322B1FDC32D5007D8974 /* Services */,
+				4B4B733E1FD45A9E0003F064 /* Protocol */,
 				4B4B733B1FD442430003F064 /* View */,
 				4B4B733A1FD4423B0003F064 /* Controller */,
 				4B4B73161FD441F50003F064 /* AppDelegate.swift */,
@@ -157,12 +160,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4B4B733E1FD45A9E0003F064 /* New Group */ = {
+		4B4B733E1FD45A9E0003F064 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */,
 			);
-			path = "New Group";
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		4BDA322B1FDC32D5007D8974 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4BDA322C1FDC332F007D8974 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		68367B6CCD07A8EAED65AB95 /* Pods */ = {
@@ -399,6 +410,7 @@
 				4B4B733D1FD44F240003F064 /* PhotoCaptureDelegate.swift in Sources */,
 				4B06E8001FD8A6DE00788612 /* LoginVC.swift in Sources */,
 				4B4B73401FD45AE30003F064 /* CameraVCDelegate.swift in Sources */,
+				4BDA322D1FDC332F007D8974 /* AuthService.swift in Sources */,
 				4B4B73381FD442380003F064 /* PreviewView.swift in Sources */,
 				4B06E7FC1FD5F85600788612 /* RoundTextField.swift in Sources */,
 			);

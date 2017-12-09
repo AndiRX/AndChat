@@ -12,21 +12,7 @@ import Photos
 
 
 class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelegate{
-//    func canStartRecording() {
-//
-//    }
-//
-//    func recordingHasStarted() {
-//
-//    }
-//
-//    func shouldEnableCameraUI(enabled: Bool) {
-//
-//    }
-//
-//    func shouldEnableRecordUI(enabled: Bool) {
-//
-//    }
+
     
     var delegate: CameraVCDelegate?
 
