@@ -22,6 +22,7 @@
 		4B4B733D1FD44F240003F064 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B733C1FD44F240003F064 /* PhotoCaptureDelegate.swift */; };
 		4B4B73401FD45AE30003F064 /* CameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */; };
 		4B4B73421FD4AFA10003F064 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B73411FD4AFA00003F064 /* GoogleService-Info.plist */; };
+		4B831DE81FDC8A300062269D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B831DE71FDC8A300062269D /* DataService.swift */; };
 		4BDA322D1FDC332F007D8974 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDA322C1FDC332F007D8974 /* AuthService.swift */; };
 		FB69A8EFD990F07354B5D21C /* Pods_AndChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408051ECC5DDE56E69087E7C /* Pods_AndChatTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		4B4B733C1FD44F240003F064 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVCDelegate.swift; sourceTree = "<group>"; };
 		4B4B73411FD4AFA00003F064 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B831DE71FDC8A300062269D /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4BDA322C1FDC332F007D8974 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		508C81E9423FBF67F6D70B8E /* Pods-AndChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndChatTests/Pods-AndChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		694534C49AC770D27DEF3B48 /* Pods-AndChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndChat/Pods-AndChat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				4BDA322C1FDC332F007D8974 /* AuthService.swift */,
+				4B831DE71FDC8A300062269D /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -335,12 +338,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-AndChat/Pods-AndChat-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +413,7 @@
 				4B4B73171FD441F50003F064 /* AppDelegate.swift in Sources */,
 				4B06E7FE1FD8A07D00788612 /* RoundedButton.swift in Sources */,
 				4B4B733D1FD44F240003F064 /* PhotoCaptureDelegate.swift in Sources */,
+				4B831DE81FDC8A300062269D /* DataService.swift in Sources */,
 				4B06E8001FD8A6DE00788612 /* LoginVC.swift in Sources */,
 				4B4B73401FD45AE30003F064 /* CameraVCDelegate.swift in Sources */,
 				4BDA322D1FDC332F007D8974 /* AuthService.swift in Sources */,
