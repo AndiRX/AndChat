@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tbe-Yv-YqY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -72,6 +72,7 @@
                         <outlet property="previewView" destination="esp-hs-G4X" id="1PP-bS-SOJ"/>
                         <outlet property="recordBtn" destination="QmF-j4-USH" id="69Y-zy-Hk1"/>
                         <segue destination="qZZ-Sv-9qL" kind="presentation" identifier="goToLoginVC" id="NDT-7q-iuZ"/>
+                        <segue destination="Tbe-Yv-YqY" kind="show" identifier="ShowUsersVC" id="Wfb-tl-jrM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -235,7 +236,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="PJO-ez-VSq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="2Tc-8W-Qrb"/>
                                 </constraints>
@@ -243,7 +244,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h6M-vj-Fkj">
-                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" id="n0K-9z-NRJ" customClass="UserCell" customModule="AndChat" customModuleProvider="target">
@@ -275,15 +276,33 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUP-ml-FbM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Hfm-V9-sQH"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Send a Pull Request" id="9Po-HI-WBM">
+                                        <barButtonItem key="rightBarButtonItem" image="send_snap" id="7vF-xg-QlW">
+                                            <connections>
+                                                <action selector="sendPRBtnPressed:" destination="Tbe-Yv-YqY" id="qWz-ib-JRN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hUP-ml-FbM" firstAttribute="top" secondItem="1Ds-b5-ueQ" secondAttribute="top" constant="20" id="0wz-lL-bD8"/>
+                            <constraint firstItem="hUP-ml-FbM" firstAttribute="trailing" secondItem="B2L-88-X2M" secondAttribute="trailing" id="1aW-Qa-Wq7"/>
                             <constraint firstItem="h6M-vj-Fkj" firstAttribute="trailing" secondItem="B2L-88-X2M" secondAttribute="trailing" id="5um-46-FOx"/>
                             <constraint firstItem="h6M-vj-Fkj" firstAttribute="leading" secondItem="B2L-88-X2M" secondAttribute="leading" id="HgD-hZ-FNx"/>
-                            <constraint firstItem="PJO-ez-VSq" firstAttribute="top" secondItem="1Ds-b5-ueQ" secondAttribute="top" id="QeX-fL-RTd"/>
+                            <constraint firstItem="PJO-ez-VSq" firstAttribute="top" secondItem="hUP-ml-FbM" secondAttribute="bottom" id="SSn-FA-9eA"/>
                             <constraint firstItem="PJO-ez-VSq" firstAttribute="leading" secondItem="B2L-88-X2M" secondAttribute="leading" id="cOf-Wd-LpK"/>
                             <constraint firstItem="h6M-vj-Fkj" firstAttribute="top" secondItem="PJO-ez-VSq" secondAttribute="bottom" id="glD-kK-YPB"/>
                             <constraint firstItem="PJO-ez-VSq" firstAttribute="trailing" secondItem="B2L-88-X2M" secondAttribute="trailing" id="qfu-HE-NQY"/>
+                            <constraint firstItem="hUP-ml-FbM" firstAttribute="leading" secondItem="B2L-88-X2M" secondAttribute="leading" id="tR8-MV-BWN"/>
                             <constraint firstItem="h6M-vj-Fkj" firstAttribute="bottom" secondItem="B2L-88-X2M" secondAttribute="bottom" id="vp6-IQ-ELN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B2L-88-X2M"/>
@@ -294,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4FB-oJ-IuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1552.8" y="117.39130434782609"/>
+            <point key="canvasLocation" x="117.59999999999999" y="-560.86956521739137"/>
         </scene>
     </scenes>
     <resources>
@@ -302,5 +321,6 @@
         <image name="createsnap_btn" width="30" height="30"/>
         <image name="devslopes" width="1080" height="1349"/>
         <image name="devslopes-mountains-white" width="451" height="335"/>
+        <image name="send_snap" width="24" height="23"/>
     </resources>
 </document>

@@ -9,6 +9,9 @@ import AVFoundation
 import Photos
 
 class PhotoCaptureProcessor: NSObject {
+    //AWR added
+    var delegate: CameraVCDelegate?
+    
 	private(set) var requestedPhotoSettings: AVCapturePhotoSettings
 	
 	private let willCapturePhotoAnimation: () -> Void
@@ -85,41 +88,46 @@ extension PhotoCaptureProcessor: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings, error: Error?) {
         if let error = error {
             print("Error capturing photo: \(error)")
+            self.delegate?.snapshotFailed()
             didFinish()
             return
         }
         
         guard let photoData = photoData else {
             print("No photo data resource")
+            self.delegate?.snapshotFailed()
             didFinish()
             return
         }
         
-        PHPhotoLibrary.requestAuthorization { status in
-            if status == .authorized {
-                PHPhotoLibrary.shared().performChanges({
-                    let options = PHAssetResourceCreationOptions()
-                    let creationRequest = PHAssetCreationRequest.forAsset()
-                    options.uniformTypeIdentifier = self.requestedPhotoSettings.processedFileType.map { $0.rawValue }
-                    creationRequest.addResource(with: .photo, data: photoData, options: options)
-                    
-                    if let livePhotoCompanionMovieURL = self.livePhotoCompanionMovieURL {
-                        let livePhotoCompanionMovieFileResourceOptions = PHAssetResourceCreationOptions()
-                        livePhotoCompanionMovieFileResourceOptions.shouldMoveFile = true
-                        creationRequest.addResource(with: .pairedVideo, fileURL: livePhotoCompanionMovieURL, options: livePhotoCompanionMovieFileResourceOptions)
-                    }
-                    
-                    }, completionHandler: { _, error in
-                        if let error = error {
-                            print("Error occurered while saving photo to photo library: \(error)")
-                        }
-                        
-                        self.didFinish()
-                    }
-                )
-            } else {
-                self.didFinish()
-            }
-        }
+        //AWR added
+        self.delegate?.snapshotTaken(snapshotData: photoData)
+        
+//        PHPhotoLibrary.requestAuthorization { status in
+//            if status == .authorized {
+//                PHPhotoLibrary.shared().performChanges({
+//                    let options = PHAssetResourceCreationOptions()
+//                    let creationRequest = PHAssetCreationRequest.forAsset()
+//                    options.uniformTypeIdentifier = self.requestedPhotoSettings.processedFileType.map { $0.rawValue }
+//                    creationRequest.addResource(with: .photo, data: photoData, options: options)
+//
+//                    if let livePhotoCompanionMovieURL = self.livePhotoCompanionMovieURL {
+//                        let livePhotoCompanionMovieFileResourceOptions = PHAssetResourceCreationOptions()
+//                        livePhotoCompanionMovieFileResourceOptions.shouldMoveFile = true
+//                        creationRequest.addResource(with: .pairedVideo, fileURL: livePhotoCompanionMovieURL, options: livePhotoCompanionMovieFileResourceOptions)
+//                    }
+//
+//                    }, completionHandler: { _, error in
+//                        if let error = error {
+//                            print("Error occurered while saving photo to photo library: \(error)")
+//                        }
+//
+//                        self.didFinish()
+//                    }
+//                )
+//            } else {
+//                self.didFinish()
+//            }
+//        }
     }
 }

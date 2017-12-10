@@ -18,6 +18,6 @@ protocol CameraVCDelegate {
     func recordingHasStarted()
     func videoRecordingComplete(videoURL: URL)
     func videoRecordingFailed()
-    func snapshotTaken(snapshotData: NSData)
+    func snapshotTaken(snapshotData: Data)
     func snapshotFailed()
 }

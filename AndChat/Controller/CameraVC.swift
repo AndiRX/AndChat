@@ -11,15 +11,15 @@ import FirebaseAuth
 
 class CameraVC: CameraViewController, CameraVCDelegate {
     func videoRecordingComplete(videoURL: URL) {
-        
+        performSegue(withIdentifier: USERSVC_SEGUE, sender: ["videoURL":videoURL])
     }
     
     func videoRecordingFailed() {
         
     }
     
-    func snapshotTaken(snapshotData: NSData) {
-        
+    func snapshotTaken(snapshotData: Data) {
+        performSegue(withIdentifier: USERSVC_SEGUE, sender: ["snapshotData":snapshotData])
     }
     
     func snapshotFailed() {
@@ -62,6 +62,18 @@ class CameraVC: CameraViewController, CameraVCDelegate {
         print("Should enable record UI")
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let usersVC = segue.destination as? UsersVC {
+            if let videoDict = sender as? Dictionary<String, URL> {
+                let url = videoDict["videoURL"]
+                usersVC.videoURL = url
+            } else if let snapDict = sender as? Dictionary<String, Data> {
+                let snapData = snapDict["snapshotData"]
+                usersVC.snapData = snapData
+            }
+        }
+    }
+    
     
     
     @IBAction func changeCameraBtnPressed(_ sender: Any) {

@@ -22,6 +22,7 @@
 		4B4B733D1FD44F240003F064 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B733C1FD44F240003F064 /* PhotoCaptureDelegate.swift */; };
 		4B4B73401FD45AE30003F064 /* CameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */; };
 		4B4B73421FD4AFA10003F064 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B73411FD4AFA00003F064 /* GoogleService-Info.plist */; };
+		4B63EA801FDD9E5D007C2B20 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B63EA7F1FDD9E5D007C2B20 /* Constants.swift */; };
 		4B831DE81FDC8A300062269D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B831DE71FDC8A300062269D /* DataService.swift */; };
 		4B831DEA1FDC8EEE0062269D /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B831DE91FDC8EEE0062269D /* UsersVC.swift */; };
 		4B831DEC1FDC8FDA0062269D /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B831DEB1FDC8FDA0062269D /* UserCell.swift */; };
@@ -62,6 +63,7 @@
 		4B4B733C1FD44F240003F064 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVCDelegate.swift; sourceTree = "<group>"; };
 		4B4B73411FD4AFA00003F064 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B63EA7F1FDD9E5D007C2B20 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4B831DE71FDC8A300062269D /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4B831DE91FDC8EEE0062269D /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		4B831DEB1FDC8FDA0062269D /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		4B4B73151FD441F50003F064 /* AndChat */ = {
 			isa = PBXGroup;
 			children = (
+				4B63EA7E1FDD9E4A007C2B20 /* Constants */,
 				4BDA322B1FDC32D5007D8974 /* Services */,
 				4B4B733E1FD45A9E0003F064 /* Protocol */,
 				4B4B733B1FD442430003F064 /* View */,
@@ -177,6 +180,14 @@
 				4B4B733F1FD45AE30003F064 /* CameraVCDelegate.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		4B63EA7E1FDD9E4A007C2B20 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4B63EA7F1FDD9E5D007C2B20 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		4BDA322B1FDC32D5007D8974 /* Services */ = {
@@ -427,6 +438,7 @@
 				4B831DE81FDC8A300062269D /* DataService.swift in Sources */,
 				4B06E8001FD8A6DE00788612 /* LoginVC.swift in Sources */,
 				4B4B73401FD45AE30003F064 /* CameraVCDelegate.swift in Sources */,
+				4B63EA801FDD9E5D007C2B20 /* Constants.swift in Sources */,
 				4BDA322D1FDC332F007D8974 /* AuthService.swift in Sources */,
 				4B4B73381FD442380003F064 /* PreviewView.swift in Sources */,
 				4B06E7FC1FD5F85600788612 /* RoundTextField.swift in Sources */,
