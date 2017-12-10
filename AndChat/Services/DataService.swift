@@ -6,6 +6,8 @@
 //  Copyright © 2017 Andi. All rights reserved.
 //
 
+let FIR_CHILD_USERS = "users"
+
 import Foundation
 import FirebaseDatabase
 
@@ -20,9 +22,13 @@ class DataService {
         return Database.database().reference()
     }
     
+    var usersRef: DatabaseReference {
+        return mainRef.child(FIR_CHILD_USERS)
+    }
+    
     func saveUser(uid: String) {
         let profile: Dictionary<String, Any> = ["firstName": "", "lastName": ""]
-        mainRef.child("users").child(uid).child("profile").setValue(profile)
+        mainRef.child(FIR_CHILD_USERS).child(uid).child("profile").setValue(profile)
         
     }
     

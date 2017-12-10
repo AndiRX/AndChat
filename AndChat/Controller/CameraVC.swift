@@ -10,6 +10,22 @@ import UIKit
 import FirebaseAuth
 
 class CameraVC: CameraViewController, CameraVCDelegate {
+    func videoRecordingComplete(videoURL: URL) {
+        
+    }
+    
+    func videoRecordingFailed() {
+        
+    }
+    
+    func snapshotTaken(snapshotData: NSData) {
+        
+    }
+    
+    func snapshotFailed() {
+        
+    }
+    
   
     @IBOutlet weak var recordBtn: UIButton!
     @IBOutlet weak var cameraBtn: UIButton!
@@ -46,6 +62,7 @@ class CameraVC: CameraViewController, CameraVCDelegate {
         print("Should enable record UI")
     }
 
+    
     
     @IBAction func changeCameraBtnPressed(_ sender: Any) {
         changeCamera(cameraBtn)
