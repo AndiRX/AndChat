@@ -221,6 +221,7 @@
                     <connections>
                         <outlet property="emailField" destination="A1g-MX-0Ya" id="olM-mP-uJV"/>
                         <outlet property="passwordField" destination="ohJ-Pw-N8P" id="Z1Z-QI-gtQ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShowCameraVC" id="YgF-Jm-SNq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ct5-1e-Sgx" userLabel="First Responder" sceneMemberID="firstResponder"/>

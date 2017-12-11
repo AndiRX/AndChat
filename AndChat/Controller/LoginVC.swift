@@ -31,6 +31,7 @@ class LoginVC: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                     return
                 }
+               self.performSegue(withIdentifier: CAMERAVC_SEGUE, sender: nil)
             })
         
         } else {

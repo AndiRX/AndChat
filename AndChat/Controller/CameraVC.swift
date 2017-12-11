@@ -81,7 +81,8 @@ class CameraVC: CameraViewController, CameraVCDelegate {
     }
     
     @IBAction func recordBtnPressed(_ sender: UIButton) {
-        toggleMovieRecording(recordBtn)
+        print("record button pressed")
+        toggleMovieRecording()
         
     }
     

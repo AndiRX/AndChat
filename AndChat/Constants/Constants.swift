@@ -10,3 +10,4 @@ import Foundation
 
 let USERSVC_SEGUE = "ShowUsersVC"
 let FIR_CHILD_USERS = "users"
+let CAMERAVC_SEGUE = "ShowCameraVC"
